@@ -21,7 +21,7 @@ This repository contains a simple yet powerful **Compound Interest Calculator** 
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/gurgant/compound_interest_calcul.git
+   git clone https://github.com/gurgant/compound_interest_calculator.git
    ```
 2. Open the `index.html` file in any modern browser.
 
@@ -29,7 +29,7 @@ This repository contains a simple yet powerful **Compound Interest Calculator** 
 
 ## Demo:
 
-You can also check the live demo hosted with GitHub Pages [here](https://gurgant.github.io/compound_interest_calcul/).
+You can also check the live demo hosted with GitHub Pages [here](https://gurgant.github.io/compound_interest_calculator/).
 
 ## License:
 
