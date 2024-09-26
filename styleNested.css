@@ -1,0 +1,173 @@
+:root {
+  /* Color Variables */
+  --color-background-light: #f4f7f6;
+  --color-white: #ffffff;
+  --color-gray-light: #f8f9fa;
+  --color-gray-dark: #333;
+  --color-gray-medium: #666;
+  --color-border-light: #ddd;
+  --color-blue: #007bff;
+  --color-blue-dark: #0056b3;
+  --color-green: #1ade00;
+
+  /* Font Sizes */
+  --font-size-small: 0.9rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.1rem;
+  --font-size-header: 1.8rem;
+
+  /* Spacing */
+  --padding-small: 8px;
+  --padding-medium: 12px;
+  --padding-large: 20px;
+
+  /* Border Radius */
+  --border-radius: 6px;
+  --container-radius: 10px;
+
+  /* Box Shadows */
+  --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Style the body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the container */
+.container {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-light);
+  border-radius: var(--container-radius);
+  padding: var(--padding-large);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+
+  h1 {
+    font-size: var(--font-size-header);
+    margin-bottom: var(--padding-large);
+    color: var(--color-gray-dark);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .form-control {
+      margin-bottom: var(--padding-large);
+      text-align: left;
+
+      label {
+        font-size: var(--font-size-small);
+        color: var(--color-gray-medium);
+        margin-bottom: var(--padding-small);
+      }
+
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: var(--padding-medium);
+        border: 1px solid var(--color-border-light);
+        border-radius: var(--border-radius);
+        background-color: var(--color-gray-light);
+        font-size: var(--font-size-medium);
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: var(--color-blue);
+        }
+      }
+    }
+
+    button[type="submit"] {
+      background-color: var(--color-blue);
+      color: white;
+      font-size: var(--font-size-medium);
+      padding: var(--padding-medium);
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--color-blue-dark);
+      }
+    }
+  }
+}
+
+/* Style for the interest result output */
+#interest {
+  margin-top: var(--padding-large);
+  padding: var(--padding-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-white),
+    var(--color-gray-light)
+  );
+  border-radius: var(--container-radius);
+  box-shadow: var(--box-shadow-light);
+  text-align: left;
+  border-left: 5px solid var(--color-blue);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-5px);
+  }
+
+  p {
+    margin: var(--padding-small) 0;
+    font-size: var(--font-size-large);
+    line-height: 1.6;
+    color: var(--color-gray-dark);
+
+    span {
+      font-weight: bold;
+      color: black;
+      font-size: var(--font-size-large);
+    }
+  }
+}
+
+/* Style the input percent container */
+.input-percent-container {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding-right: 30px; /* Give space for the percentage symbol */
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "%";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-medium);
+    font-size: var(--font-size-medium);
+  }
+}
+
+/* Additional classes for specific colors */
+.green {
+  color: var(--color-green) !important;
+}
+
+.blue {
+  color: var(--color-blue) !important;
+}
